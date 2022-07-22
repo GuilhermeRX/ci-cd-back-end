@@ -19,7 +19,7 @@ app.get('/products', async (_req, res) => {
 });
 
 app.get('/', (_req, res) => {
-  res.send('Hello Back End');
+  res.send('Hello Back End, deploy automagicamente');
 });
 
 app.listen(port, () => console.log('Rodando na porta', port));
