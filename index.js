@@ -13,7 +13,7 @@ app.post('/products', async (req, res) => {
   res.status(201).json(product);
 });
 
-app.get('/products', async (req, res) => {
+app.get('/products', async (_req, res) => {
   const products = await Product.findAll();
   res.status(200).json(products);
 });
@@ -22,4 +22,4 @@ app.get('/', (_req, res) => {
   res.send('Hello Back End');
 });
 
-app.listen(port, () => console.log(`Rodando na porta ${port}!`));
+app.listen(port, () => console.log('Rodando na porta', port));
